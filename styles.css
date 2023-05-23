@@ -1,0 +1,124 @@
+:root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cream);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#main-card {
+    background-color: var(white);
+    display: flex;
+    flex-direction: row;
+    width: 620px;
+    height: 450px;
+}
+
+#left-card {
+    height: 450px;
+    border-radius: 15px 0px 0px 15px ;
+}
+
+#top-card {
+    display: none;
+}
+
+#right-card {
+    background-color: var(--white);
+    border-radius: 0px 15px 15px 0px;
+    padding: 30px;
+}
+
+#title {
+    color: var(--dark-grayish-blue);
+    font-family:"Montserrat", sans-serif;
+    margin-bottom: 15px;
+}
+
+#header {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#description {
+    color: var(--dark-grayish-blue);
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 25px;
+}
+
+#prices {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
+}
+
+#sale-price {
+    color: var(--dark-cyan);
+    font-family: "Fraunces", serif;
+}
+
+#base-price {
+    color: var(--dark-grayish-blue);
+    font-family: "Montserrat", sans-serif;
+    text-decoration: line-through;
+    font-size: 0.85rem;
+}
+
+button {
+    background-color: var(--dark-cyan);
+    color: var(--white);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border-width: 0;
+}
+
+@media screen and (max-width: 575px) {
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    
+    #main-card {
+        flex-direction: column;
+        width: 325px;
+        margin-top: -100px;
+    }
+    
+    #left-card {
+        display: none;
+    }
+
+    #top-card {
+        display: block;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    #right-card {
+        border-radius: 0px 0px 15px 15px;
+    }
+
+}
+
